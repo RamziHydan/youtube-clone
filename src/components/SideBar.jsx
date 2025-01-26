@@ -2,9 +2,11 @@ import React from 'react'
 import { categories } from '../utils/constants'
 import { Stack } from '@mui/material'
 
-const selectCategory = 'New';
+// const selectCategory = 'New'; // now we no longer in need to use static variable
 
-const SideBar = () => {
+const SideBar = ({
+    selectCategory,setSelectedCategory
+}) => {
   return (
     <Stack direction="row" 
     sx={{
@@ -16,6 +18,7 @@ const SideBar = () => {
         {categories.map((category) => (
             <button 
             className='category-btn'
+            onClick={()=> setSelectedCategory(category.name) }
             style={{
                 background: category.name === selectCategory && '#FC1503',
                 color:'white',
