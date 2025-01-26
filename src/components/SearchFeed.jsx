@@ -6,11 +6,23 @@ import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const SearchFeed = () => {
   const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { searchTerm } = useParams();
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
-      .then((data) => setVideos(data.items));
+    setLoading(true);
+    if (searchTerm) {
+      fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
+        .then((data) => {
+          setVideos(data.items || []);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error fetching search results:', error);
+          setVideos([]);
+          setLoading(false);
+        });
+    }
   }, [searchTerm]);
 
   return (
@@ -18,7 +30,13 @@ const SearchFeed = () => {
       <Typography variant='h4' fontWeight="bold" mb={2} sx={{ color: 'white' }}>
         Search results for: <span style={{ color: '#F31503' }}>{searchTerm}</span>
       </Typography>
-      <Videos videos={videos} />
+      {loading ? (
+        <Typography variant='h6' sx={{ color: 'white' }}>
+          Loading...
+        </Typography>
+      ) : (
+        <Videos videos={videos} />
+      )}
     </Box>
   )
 }
