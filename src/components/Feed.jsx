@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
-import SideBar from './SideBar';
+import {SideBar, Videos } from './'
 
 
 
@@ -24,10 +24,11 @@ const Feed = () => {
                 color:'white'
             }} >
                 New<span style={{ color: '#F31503' }} >
-                    Videos
+                     Videos
                 </span>
             </Typography>
         </Box>
+        <Videos videos={[]} />
     </Stack>
   )
 }
