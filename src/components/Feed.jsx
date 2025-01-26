@@ -10,7 +10,7 @@ const Feed = () => {
     const [ videos, setVideos ] = useState([]);
 
     useEffect(() =>{
-        fetchFromAPI('search?part=snippet&q={SelectCategory}')
+        fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
         .then((data) => setVideos(data.items) )
     },[selectedCategory]);
 
@@ -33,6 +33,7 @@ const Feed = () => {
                     Copyright 2022 JSM Media
                 </Typography>                
         </Box>
+
         <Box p={2} sx={{ overflow: 'auto' , height:'90vh', flex:2 }} >
             <Typography variant='h4' fontWeight="bold" mb={2} sx={{
                 color:'white'
@@ -41,8 +42,8 @@ const Feed = () => {
                      Videos
                 </span>
             </Typography>
+        <Videos videos={videos} />
         </Box>
-        <Videos videos={[videos]} />
     </Stack>
   )
 }
