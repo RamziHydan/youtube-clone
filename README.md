@@ -29,7 +29,7 @@ A modern YouTube clone built with React.js and Material-UI, featuring video play
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/youtube-clone.git
+   git clone https://github.com/RamziHydan/youtube-clone.git
    ```
 
 2. Install dependencies:
