@@ -2,7 +2,7 @@
 
 A modern YouTube clone built with React.js and Material-UI, featuring video playback, search functionality, and channel views.
 
-![YouTube Clone](./Screenshot 2025-01-27 095724.png)
+![YouTube Clone](./Screenshot.png)
 
 ## 🚀 Features
 
