@@ -1,46 +1,157 @@
-# Getting Started with Create React App
+# YouTube Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern YouTube clone built with React.js and Material-UI, featuring video playback, search functionality, and channel views.
 
-## Available Scripts
+![YouTube Clone](screenshot.png)
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Video Playback**: Seamless video streaming with React Player
+- **Search Functionality**: Real-time search with YouTube Data API integration
+- **Channel Pages**: Dedicated channel pages with channel details and videos
+- **Responsive Design**: Mobile-first approach with Material-UI
+- **Category Filtering**: Browse videos by categories
+- **Related Videos**: Smart video recommendations
+- **Dark Theme**: Modern dark theme UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠️ Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Frontend Framework**: React 18.2.0
+- **UI Library**: Material-UI v5
+- **Routing**: React Router v6
+- **HTTP Client**: Axios
+- **Video Player**: React Player
+- **API**: YouTube Data API v3
+- **Styling**: Emotion (CSS-in-JS)
+- **Environment Variables**: dotenv
 
-### `npm test`
+## 📦 Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/youtube-clone.git
+   ```
 
-### `npm run build`
+2. Install dependencies:
+   ```bash
+   cd youtube-clone
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Create a `.env` file in the root directory and add your YouTube Data API key:
+   ```env
+   REACT_APP_RAPID_API_KEY=your_api_key_here
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Project Structure
 
-### `npm run eject`
+```
+src/
+├── components/          # React components
+│   ├── Navbar.jsx      # Global navigation
+│   ├── Feed.jsx        # Homepage feed
+│   ├── VideoDetail.jsx # Video page
+│   ├── ChannelDetail.jsx
+│   ├── SearchFeed.jsx
+│   ├── SearchBar.jsx
+│   ├── Videos.jsx
+│   ├── VideoCard.jsx
+│   └── ChannelCard.jsx
+├── utils/              # Utility functions
+│   ├── fetchFromAPI.js # API calls
+│   └── constants.js    # Constants
+├── App.js              # Main component
+└── index.js           # Entry point
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔍 Key Features Explained
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Video Playback
+- Smooth video streaming using React Player
+- Video statistics (views, likes)
+- Related videos suggestions
+- Channel information display
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Search Functionality
+- Real-time search results
+- Search history via URL parameters
+- Category-based filtering
+- Loading states and error handling
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Channel Features
+- Detailed channel pages
+- Channel videos display
+- Channel statistics
+- Subscribe button (UI only)
 
-## Learn More
+### Responsive Design
+- Mobile-first approach
+- Adaptive layouts
+- Flexible grid system
+- Breakpoint-based styling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 Configuration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project uses environment variables for configuration. Create a `.env` file with the following:
+
+```env
+REACT_APP_RAPID_API_KEY=your_youtube_api_key
+```
+
+## 📱 Responsive Design
+
+The application is fully responsive and works on:
+- Mobile devices (< 768px)
+- Tablets (768px - 1024px)
+- Desktops (> 1024px)
+
+## 🚀 Performance Optimizations
+
+- Lazy loading of videos
+- Optimized re-renders
+- Error boundaries implementation
+- Efficient state updates
+- Loading states for better UX
+
+## 🧪 Future Enhancements
+
+- [ ] User authentication
+- [ ] Comments section
+- [ ] Video playlists
+- [ ] Watch history
+- [ ] Video quality selection
+- [ ] Infinite scrolling
+- [ ] Progressive loading
+- [ ] Video sharing
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Material-UI](https://mui.com/) for the amazing UI components
+- [YouTube Data API](https://developers.google.com/youtube/v3) for the data
+- [React Player](https://github.com/CookPete/react-player) for video playback
+
+## 👤 Author
+
+Your Name
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+
+---
+⭐️ Star this repo if you find it helpful!
