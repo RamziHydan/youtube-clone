@@ -1,4 +1,4 @@
-# YouTube Clone [https://thunderous-moonbeam-21545a.netlify.app/]
+# YouTube Clone ** [Click here to browse](https://thunderous-moonbeam-21545a.netlify.app/)
 
 A modern YouTube clone built with React.js and Material-UI, featuring video playback, search functionality, and channel views.
 
