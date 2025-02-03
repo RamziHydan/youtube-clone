@@ -2,7 +2,7 @@
 
 A modern YouTube clone built with React.js and Material-UI, featuring video playback, search functionality, and channel views.
 
-![YouTube Clone](./mainPage.png)
+![YouTube Clone](./Screenshot.png)
 
 ## 🚀 Features
 
@@ -149,7 +149,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-Ramzi Hidan
+Ramzi Haidan
 
 - GitHub: [@RamziHydan](https://github.com/RamziHydan)
 - LinkedIn: [Ramzi Hidan](https://www.linkedin.com/in/ramzi-haidan-441a44273/)
